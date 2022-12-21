@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Mastermind",
+      "live": "https://maripirs.github.io/Mastermind/",
+      "git": "https://github.com/Maripirs/Mastermind",
+      "image": "http://www.imgur.com/pictureofproject.png"
+    },
+    {
+      "name": "Tic Tac Toe",
+      "live": "https://maripirs.github.io/Tic-Tac-Toe/",
+      "git": "https://github.com/Maripirs/Tic-Tac-Toe",
+      "image": "http://www.imgur.com/pictureofproject.png"
+    },
+    {
+      "name": "Game of Tres",
+      "live": "https://maripirs.github.io/Game-of-Tres/",
+      "git": "https://github.com/Maripirs/Game-of-Tres",
+      "image": "http://www.imgur.com/pictureofproject.png"
+    },
+    {
+      "name": "Pokemon Advantage Calculator",
+      "live": "https://davipi.netlify.app/",
+      "git": "https://github.com/Maripirs/pokemon-advantage-calculator",
+      "image": "http://www.imgur.com/pictureofproject.png"
+    }
+  ]
