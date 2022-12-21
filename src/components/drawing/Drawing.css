@@ -1,0 +1,104 @@
+.circle-crop {
+	aspect-ratio: 1/1;
+	border: 4px solid black;
+	outline: 3px solid white;
+	overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 1px rgb(0, 0, 0) inset;
+	margin-bottom: 5vh;
+}
+
+.circle-crop .drawing-container {
+	position: relative;
+	left: -43%;
+	height: 400%;
+	width: 190%;
+	background-color: white;
+	z-index: -1;
+}
+.drawing-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+#background-fill {
+	opacity: 1;
+	visibility: show;
+	filter: saturate(0.1) brightness(3) hue-rotate(360deg);
+}
+.circle-crop #body-fill {
+	opacity: 1;
+	visibility: hidden;
+	filter: saturate(1) brightness(1) hue-rotate(360deg);
+}
+
+#line-work {
+	opacity: 1;
+	visibility: show;
+}
+#shadows {
+	opacity: 0.4;
+}
+
+/* ABOUT ME DRAWING IN MOBILE VIEW */
+@media (max-width: 600px) {
+	.multi-crop #body-fill {
+		opacity: 1;
+		visibility: hidden;
+		filter: saturate(1) brightness(1) hue-rotate(360deg);
+	}
+	.multi-crop {
+		aspect-ratio: 1/1;
+		border: 4px solid black;
+		outline: 3px solid white;
+		overflow: hidden;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 1px rgb(0, 0, 0) inset;
+	}
+	.multi-crop .drawing-container {
+		position: relative;
+		left: -43%;
+		top: 0%;
+		height: 400%;
+		width: 190%;
+		background-color: white;
+		z-index: -1;
+	}
+}
+
+/* ABOUT ME DRAWING IN DESKTOP VIEW */
+@media (min-width: 600px) {
+	.multi-crop {
+		height: 95%;
+		overflow: hidden;
+		margin-bottom: 0px;
+		border-radius: 0px;
+		border: none;
+		box-shadow: none;
+		outline: none;
+	}
+
+	.multi-crop .drawing-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		z-index: -1;
+	}
+
+	.multi-crop #background-fill {
+		visibility: hidden;
+	}
+
+	.multi-crop #body-fill {
+		visibility: show;
+		filter: saturate(0) brightness(1.5);
+	}
+}

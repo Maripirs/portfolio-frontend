@@ -1,0 +1,40 @@
+.footer {
+	width: 100vw;
+	height: 10vh;
+	min-height: 100px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(54, 54, 70);
+	color: white;
+}
+
+.links {
+	color: pink;
+	text-decoration: none;
+}
+
+.link-logo {
+	width: auto;
+	height: 30px;
+}
+
+#linkedin-logo {
+	filter: grayscale(1) brightness(5);
+}
+
+.link-group {
+	margin-top: 10px;
+	width: 200px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#footer-text {
+	font-size: 12px;
+	margin: 2px;
+	font-weight: 100;
+	color: rgb(169, 169, 169);
+}

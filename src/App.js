@@ -1,24 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { Route, Routes } from "react-router";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Home from "./pages/Home/Home";
+import Main from "./pages/Main/Main";
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route exact path="/" element ={<Home/>} />
-        <Route exact path="/projects" element ={<Projects URL={URL}/>} />
-        <Route exact path="/about" element ={<About URL={URL}/>} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+	return (
+		<Routes>
+			<Route exact path="/" element={<Home />} />
+			<Route path="/main/*" element={<Main />} />
+		</Routes>
+	);
 }
 
 export default App;
