@@ -7,7 +7,7 @@ function App() {
 	return (
 		<Routes>
 			<Route exact path="/" element={<Home />} />
-			<Route path="/main/*" element={<Main />} />
+			<Route exact path="/main" element={<Main URL={URL} />} />
 		</Routes>
 	);
 }

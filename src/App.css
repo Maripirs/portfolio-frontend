@@ -7,6 +7,13 @@
 	height: 100vh;
 }
 
+.section-title {
+	width: 100%;
+	background-color: rgb(41, 41, 84);
+	text-align: center;
+	margin: 0px;
+}
+
 /* 
 #root, body{
   height: 100vh;

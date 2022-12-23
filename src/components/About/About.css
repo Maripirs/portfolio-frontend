@@ -1,3 +1,10 @@
+#about {
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	justify-content: center;
+}
 .about-text {
 	display: flex;
 	flex-direction: column;
@@ -8,7 +15,6 @@
 .about-bio {
 	display: flex;
 	flex-direction: column;
-	color: white;
 	text-align: justify;
 	justify-content: space-around;
 	align-items: center;
@@ -61,6 +67,12 @@
 	}
 	.about-text {
 		flex-grow: 1;
+	}
+	#about .section-title {
+		margin-bottom: 0px;
+	}
+	#about {
+		justify-content: space-between;
 	}
 }
 /* DESKTOP */

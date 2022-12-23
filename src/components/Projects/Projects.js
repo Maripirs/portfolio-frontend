@@ -21,9 +21,14 @@ const Projects = (props) => {
 				<div className="project-title">{project.name}</div>
 				<div className="card-contents">
 					<div className="project-img-cont">
-						{/* <img src={project.image} alt="project screenshot" /> */}
+						<img
+							className="project-img-element"
+							src={project.image}
+							alt="project screenshot"
+						/>
 					</div>
 					<div className="project-info">
+						<div className="project-summary"></div>
 						<div className="project-links">
 							<a href={project.git}>
 								<button>Github</button>
@@ -67,7 +72,14 @@ const Projects = (props) => {
 	// 	</div>
 	// );
 
-	return projects ? projectsHTML : <h1>Loading...</h1>;
+	return projects ? (
+		<>
+			<h2 className="section-title">Projects</h2>
+			<div className="cards-container">{projectsHTML}</div>
+		</>
+	) : (
+		<h1>Loading...</h1>
+	);
 };
 
 export default Projects;

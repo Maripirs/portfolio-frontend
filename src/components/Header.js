@@ -1,18 +1,44 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./Header.css";
 
 function Header(props) {
 	return (
 		<header>
 			<nav className="nav-bar">
-				<Link to="/">
-					<div>HOME</div>
+				<Link to="/#welcomeScreen">
+					<div className="nav-text">Home</div>
 				</Link>
-				<Link to="/main/about">
-					<div>ABOUT</div>
+				<Link
+					smooth
+					to="#about"
+					id="aboutNav"
+					className={props.active === "aboutNav" ? "selected" : undefined}
+				>
+					<div className="nav-text">About</div>
 				</Link>
-				<Link to="/main/projects">
-					<div>PROJECTS</div>
+				<Link
+					smooth
+					to="#projects"
+					id="projectsNav"
+					className={props.active === "projectsNav" ? "selected" : undefined}
+				>
+					<div className="nav-text">Projects</div>
+				</Link>
+				<Link
+					smooth
+					to="#skills"
+					id="skillsNav"
+					className={props.active === "skillsNav" ? "selected" : undefined}
+				>
+					<div className="nav-text">Skills</div>
+				</Link>
+				<Link
+					smooth
+					to="#contact"
+					id="contactNav"
+					className={props.active === "contactNav" ? "selected" : undefined}
+				>
+					<div className="nav-text">Contact</div>
 				</Link>
 			</nav>
 		</header>
