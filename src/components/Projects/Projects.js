@@ -6,7 +6,9 @@ const Projects = (props) => {
 	const [projectsHTML, setProjectsHTML] = useState(null);
 
 	const getProjectsData = async () => {
-		const response = await fetch("../../projects.json");
+		const response = await fetch(
+			"https://maripi-portfolio-backend.herokuapp.com/projects"
+		);
 		const data = await response.json();
 		setProjects(data);
 	};
