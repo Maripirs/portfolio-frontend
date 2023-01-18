@@ -9,6 +9,17 @@ import "./Main.css";
 
 const Main = () => {
 	const [active, setActive] = useState("aboutNav");
+	const [headerClass, setHeaderClass] = useState("");
+	const [prevScroll, setPrevScroll] = useState(0);
+	const handleScroll = (e) => {
+		let currentScroll = e.target.scrollTop;
+		if (prevScroll < currentScroll) {
+			setHeaderClass("header_hidden");
+		} else {
+			setHeaderClass("header_active");
+		}
+		setPrevScroll(currentScroll);
+	};
 
 	const refs = [];
 
@@ -43,8 +54,8 @@ const Main = () => {
 	}, []);
 	return (
 		<div className="main-page">
-			<Header active={active} />
-			<div className="main-content">
+			<Header active={active} headerClass={headerClass} />
+			<div className="main-content" onScroll={handleScroll}>
 				<div className="page-section" id="about" ref={newRef()}>
 					<About />
 				</div>

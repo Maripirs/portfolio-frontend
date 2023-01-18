@@ -1,9 +1,10 @@
+import { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Header.css";
 
 function Header(props) {
 	return (
-		<header>
+		<header className={props.headerClass}>
 			<nav className="nav-bar">
 				<Link to="/#welcomeScreen">
 					<div className="nav-text">Home</div>

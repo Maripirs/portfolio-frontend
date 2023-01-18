@@ -1,6 +1,8 @@
+:root {
+	--header-speed: 0.25s;
+}
+
 header {
-	min-height: 10vh;
-	max-height: 10vh;
 	width: 100%;
 	background-color: rgb(50, 50, 70);
 	color: white;
@@ -8,6 +10,23 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+.header_hidden {
+	min-height: 0vh;
+	max-height: 0vh;
+	width: 100%;
+	transition: var(--header-speed);
+}
+.header_hidden .nav-bar {
+	transition: var(--header-speed);
+}
+
+.header_active {
+	min-height: 10vh;
+	max-height: 10vh;
+	width: 100%;
+	transition: var(--header-speed);
 }
 
 .nav-bar {
@@ -34,6 +53,13 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.nav-bar a:hover {
+	background-color: rgba(10, 10, 81, 0.5);
+	height: 10vh;
+	box-shadow: 10px -14px 15px 0px rgba(0, 0, 0, 0.2),
+		-10px -15px 15px 4px rgba(0, 0, 0, 0.2);
 }
 .selected {
 	background-color: rgb(10, 10, 81);

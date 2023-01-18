@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	font-family: "Poppins";
 	color: white;
+	overscroll-behavior: none;
 }
 
 a,
