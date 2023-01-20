@@ -3,6 +3,9 @@ import { HashLink as Link } from "react-router-hash-link";
 import "./Header.css";
 
 function Header(props) {
+	const handleHeaderClick = () => {
+		props.setHeaderClass("header_active");
+	};
 	return (
 		<header className={props.headerClass}>
 			<nav className="nav-bar">
@@ -14,6 +17,7 @@ function Header(props) {
 					to="#about"
 					id="aboutNav"
 					className={props.active === "aboutNav" ? "selected" : undefined}
+					onClick={handleHeaderClick}
 				>
 					<div className="nav-text">About</div>
 				</Link>
@@ -22,6 +26,7 @@ function Header(props) {
 					to="#projects"
 					id="projectsNav"
 					className={props.active === "projectsNav" ? "selected" : undefined}
+					onClick={handleHeaderClick}
 				>
 					<div className="nav-text">Projects</div>
 				</Link>
@@ -30,6 +35,7 @@ function Header(props) {
 					to="#skills"
 					id="skillsNav"
 					className={props.active === "skillsNav" ? "selected" : undefined}
+					onClick={handleHeaderClick}
 				>
 					<div className="nav-text">Skills</div>
 				</Link>
@@ -38,6 +44,7 @@ function Header(props) {
 					to="#contact"
 					id="contactNav"
 					className={props.active === "contactNav" ? "selected" : undefined}
+					onClick={handleHeaderClick}
 				>
 					<div className="nav-text">Contact</div>
 				</Link>

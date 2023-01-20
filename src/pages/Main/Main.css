@@ -24,6 +24,11 @@
 	z-index: 5;
 }
 
+.empty-space.header_hidden {
+	min-height: 10vh;
+	max-height: 10vh;
+}
+
 #root,
 body {
 	height: 100vh;

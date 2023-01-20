@@ -1,3 +1,7 @@
+:root {
+	--dark-bg: black;
+	--light-bg: white;
+}
 .App {
 	display: flex;
 	flex-direction: column;

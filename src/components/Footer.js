@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import "./Footer.css";
 import { githubLogo, linkedInLogo } from "./logos/";
+import ThemeContext from "./ThemeContext";
 function Footer(props) {
+	const { theme, setTheme } = useContext(ThemeContext);
+	const handleTheme = () => {
+		theme == "dark" ? setTheme("light") : setTheme("dark");
+	};
 	return (
 		<div className="footer">
 			<div className="link-group">
@@ -25,7 +31,8 @@ function Footer(props) {
 					/>
 				</a>
 			</div>
-			<p id="footer-text">© 2022 Maripi Bartosch</p>
+			<p id="footer-text">© 2022 Maripi Bartosch</p>{" "}
+			<div onClick={handleTheme}>change theme</div>
 		</div>
 	);
 }
