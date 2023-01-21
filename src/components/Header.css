@@ -76,10 +76,10 @@ header {
 }
 
 .dark .nav-logo {
-	filter: brightness(50) saturate(0);
+	filter: brightness(200) saturate(0);
 }
 
-.light .nav-logo.light {
+.light .nav-logo {
 	filter: brightness(50) saturate(0);
 }
 
