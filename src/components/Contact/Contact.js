@@ -1,27 +1,39 @@
 import "./Contact.css";
-import ThemeContext from "../ThemeContext";
-import { useContext } from "react";
+import { useState } from "react";
 const Contact = (props) => {
-	const { theme, themeColors } = useContext(ThemeContext);
+	const submitForm = (e) => {
+		e.preventDefault();
+		console.log(form);
+	};
+	const initialState = {
+		email: "",
+		content: "",
+	};
+	const handleChange = (e) => {
+		setForm({ ...form, [e.target.id]: e.target.value });
+	};
+	const [form, setForm] = useState(initialState);
 	return (
 		<>
-			<h2
-				className="section-title"
-				style={{
-					backgroundColor:
-						theme === "dark"
-							? themeColors.dark.background3
-							: themeColors.light.background3,
-					color:
-						theme === "dark"
-							? themeColors.dark.color1
-							: themeColors.light.color1,
-				}}
-			>
-				{" "}
-				Contact{" "}
-			</h2>
-			<div className="contact-form"> This is a form</div>
+			<h2 className="section-title"> Contact </h2>
+			<div className="contact-container">
+				<h3>Say Hi!</h3>
+				<form className="contact-form" onSubmit={submitForm}>
+					<input
+						type="text"
+						placeholder="Your Email"
+						id="email"
+						onChange={handleChange}
+					/>
+					<textarea
+						type="text"
+						placeholder="Type your message"
+						id="content"
+						onChange={handleChange}
+					/>
+					<input type="submit" className="submit-button" />
+				</form>
+			</div>
 		</>
 	);
 };

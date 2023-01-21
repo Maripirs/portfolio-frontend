@@ -14,7 +14,9 @@ const Main = () => {
 	const [headerClass, setHeaderClass] = useState("header_active");
 	const [prevScroll, setPrevScroll] = useState(0);
 	const [navScrolling, setNavScrolling] = useState(false);
-
+	useEffect(() => {
+		setActive("aboutNav");
+	});
 	const handleScroll = (e) => {
 		let currentScroll = e.target.scrollTop;
 		if (
@@ -75,29 +77,21 @@ const Main = () => {
 				onScroll={navScrolling ? undefined : handleScroll}
 			>
 				<div className="page-section" id="about" ref={newRef()}>
+					<div className="header-background"></div>
 					<About />
 				</div>
 				<div className="page-section" id="projects" ref={newRef()}>
+					<div className="header-background"></div>
 					<Projects />
 				</div>
 				<div className="page-section" id="skills" ref={newRef()}>
+					<div className="header-background"></div>
 					<Skills />
 				</div>
-				<div
-					className={"empty-space"}
-					style={{
-						display: headerClass === "header_active" ? "none" : "block",
-					}}
-				></div>
 				<div className="page-section" id="contact" ref={newRef()}>
+					<div className="header-background"></div>
 					<ContactMe />
 				</div>
-				<div
-					className={"empty-space"}
-					style={{
-						display: headerClass === "header_active" ? "none" : "block",
-					}}
-				></div>
 			</div>
 			<Footer />
 		</div>
