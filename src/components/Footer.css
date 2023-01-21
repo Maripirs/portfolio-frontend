@@ -1,17 +1,14 @@
 .footer {
 	width: 100vw;
-	min-height: 10vh;
-	max-height: 10vh;
+	min-height: calc(var(--vh, 1vh) * 10);
+	max-height: calc(var(--vh, 1vh) * 10);
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgb(50, 50, 70);
-	color: white;
 }
 
 .links {
-	color: pink;
 	text-decoration: none;
 }
 
@@ -36,5 +33,13 @@
 	font-size: 12px;
 	margin: 2px;
 	font-weight: 100;
-	color: rgb(169, 169, 169);
+	/* color: rgb(169, 169, 169); */
+}
+footer.light {
+	background-color: var(--light-bg2);
+	color: var(--light-co3);
+}
+footer.dark {
+	background-color: var(--dark-bg2);
+	color: var(--dark-co1);
 }

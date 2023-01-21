@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import "./Projects.css";
+import ThemeContext from "../ThemeContext";
+import { useContext } from "react";
 
 const Projects = (props) => {
+	const { theme, themeColors } = useContext(ThemeContext);
 	const [projects, setProjects] = useState(null);
 	const [projectsHTML, setProjectsHTML] = useState(null);
 
@@ -19,7 +22,7 @@ const Projects = (props) => {
 
 	const dataToHTML = () => {
 		return projects.map((project, index) => (
-			<div key={index} className="project-card">
+			<div key={index} className={"project-card " + theme}>
 				<div className="project-title">{project.name}</div>
 				<div className="card-contents">
 					<div className="project-img-cont">
@@ -51,32 +54,23 @@ const Projects = (props) => {
 		}
 	}, [projects]);
 
-	// return (
-	// 	<div className="project-card">
-	// 		<div className="project-title">
-	// 			<h1>Project Name</h1>
-	// 		</div>
-	// 		<div className="card-contents">
-	// 			<div className="project-img-cont"></div>
-	// 			<div className="project-info">
-	// 				<p>This is a project about a thing</p>
-	// 				<p>More text about this project</p>
-	// 				<div className="project-links">
-	// 					<a>
-	// 						<button>Github</button>
-	// 					</a>
-	// 					<a>
-	// 						<button>Live Site</button>
-	// 					</a>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// );
-
 	return projects ? (
 		<>
-			<h2 className="section-title">Projects</h2>
+			<h2
+				className="section-title"
+				style={{
+					backgroundColor:
+						theme === "dark"
+							? themeColors.dark.background3
+							: themeColors.light.background3,
+					color:
+						theme === "dark"
+							? themeColors.dark.color1
+							: themeColors.light.color1,
+				}}
+			>
+				Projects
+			</h2>
 			<div className="cards-container">{projectsHTML}</div>
 		</>
 	) : (

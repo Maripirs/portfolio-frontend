@@ -16,7 +16,6 @@
 
 .project-card {
 	display: flex;
-	box-shadow: 7px 10px 28px 8px rgba(0, 0, 0, 0.5);
 }
 
 .project-title {
@@ -35,7 +34,6 @@
 }
 .project-img-element {
 	object-fit: cover;
-	box-shadow: 3px 5px 14px 4px rgba(0, 0, 0, 0.5);
 	border: 3px solid black;
 }
 .card-contents {
@@ -92,6 +90,12 @@
 		max-width: 100%;
 		max-height: 100%;
 	}
+	.project-card.dark {
+		box-shadow: 3px 5px 14px 4px rgba(0, 0, 0, 0.5);
+	}
+	.project-card.light {
+		box-shadow: 7px 10px 28px 8px rgba(0, 0, 0, 0.2);
+	}
 }
 /* DESKTOP */
 @media (min-width: 600px) {
@@ -143,5 +147,11 @@
 	}
 	.title-text {
 		height: 20px;
+	}
+	.project-card.dark {
+		box-shadow: 7px 10px 28px 8px rgba(0, 0, 0, 0.5);
+	}
+	.project-card.light {
+		box-shadow: 7px 10px 28px 8px rgba(0, 0, 0, 0.2);
 	}
 }

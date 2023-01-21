@@ -8,6 +8,7 @@
 	flex-direction: column;
 	background-color: rgb(33, 32, 37);
 	z-index: -1;
+	color: white;
 }
 
 .view-work {

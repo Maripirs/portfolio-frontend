@@ -9,13 +9,20 @@ import "./Main.css";
 import ThemeContext from "../../components/ThemeContext";
 
 const Main = () => {
-	const { theme, setTheme, themeColors } = useContext(ThemeContext);
+	const { theme } = useContext(ThemeContext);
 	const [active, setActive] = useState("aboutNav");
-	const [headerClass, setHeaderClass] = useState("");
+	const [headerClass, setHeaderClass] = useState("header_active");
 	const [prevScroll, setPrevScroll] = useState(0);
+	const [navScrolling, setNavScrolling] = useState(false);
+
 	const handleScroll = (e) => {
 		let currentScroll = e.target.scrollTop;
-		if (prevScroll < currentScroll) {
+		if (
+			e.target.scrollTop < 100 ||
+			e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 100
+		) {
+			setHeaderClass("header_active");
+		} else if (prevScroll < currentScroll) {
 			setHeaderClass("header_hidden");
 		} else {
 			setHeaderClass("header_active");
@@ -54,22 +61,18 @@ const Main = () => {
 			refs.forEach((ref) => ref.current && observer.unobserve(ref.current));
 		};
 	}, []);
+
 	return (
-		<div className="main-page">
+		<div className={"main-page " + theme}>
 			<Header
 				active={active}
 				headerClass={headerClass}
 				setHeaderClass={setHeaderClass}
+				setNavScrolling={setNavScrolling}
 			/>
 			<div
-				className="main-content"
-				onScroll={handleScroll}
-				style={{
-					backgroundColor:
-						theme === "dark"
-							? themeColors.dark.background1
-							: themeColors.light.background1,
-				}}
+				className="main-content "
+				onScroll={navScrolling ? undefined : handleScroll}
 			>
 				<div className="page-section" id="about" ref={newRef()}>
 					<About />
@@ -80,11 +83,21 @@ const Main = () => {
 				<div className="page-section" id="skills" ref={newRef()}>
 					<Skills />
 				</div>
-				<div className={"empty-space " + headerClass}></div>
+				<div
+					className={"empty-space"}
+					style={{
+						display: headerClass === "header_active" ? "none" : "block",
+					}}
+				></div>
 				<div className="page-section" id="contact" ref={newRef()}>
 					<ContactMe />
 				</div>
-				<div className={"empty-space " + headerClass}></div>
+				<div
+					className={"empty-space"}
+					style={{
+						display: headerClass === "header_active" ? "none" : "block",
+					}}
+				></div>
 			</div>
 			<Footer />
 		</div>
