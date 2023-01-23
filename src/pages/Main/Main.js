@@ -4,19 +4,18 @@ import Projects from "../../components/Projects/Projects.js";
 import About from "../../components/About/About.js";
 import Skills from "../../components/Skills/Skills.js";
 import ContactMe from "../../components/Contact/Contact.js";
-import { useState, useEffect, createRef, useContext } from "react";
+import { useState, useEffect, createRef } from "react";
 import "./Main.css";
-import ThemeContext from "../../components/ThemeContext";
 
 const Main = () => {
-	const { theme } = useContext(ThemeContext);
 	const [active, setActive] = useState("aboutNav");
 	const [headerClass, setHeaderClass] = useState("header_active");
 	const [prevScroll, setPrevScroll] = useState(0);
 	const [navScrolling, setNavScrolling] = useState(false);
 	useEffect(() => {
 		setActive("aboutNav");
-	});
+	}, []);
+
 	const handleScroll = (e) => {
 		let currentScroll = e.target.scrollTop;
 		if (
@@ -65,7 +64,7 @@ const Main = () => {
 	}, []);
 
 	return (
-		<div className={"main-page " + theme}>
+		<div className="main-page">
 			<Header
 				active={active}
 				headerClass={headerClass}

@@ -39,19 +39,6 @@ html {
 }
 
 :root {
-	--light-bg1: white;
-	--light-bg2: #afbbc6;
-	--light-bg3: #afbbc640;
-	--light-bg4: #afbbc622;
-	--light-co1: #524f6b;
-	--light-co2: black;
-	--light-co3: white;
-	--dark-bg1: rgb(33, 32, 37);
-	--dark-bg2: rgb(50, 50, 70);
-	--dark-bg3: rgb(41, 41, 84);
-	--dark-co1: white;
-	--dark-co2: white;
-	--dark-co3: white;
 	--bar-hg-mb: 60px;
 	--bar-hg-dt: 100px;
 }

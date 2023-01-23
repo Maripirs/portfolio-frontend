@@ -1,7 +1,7 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Header.css";
-import ThemeContext from "./ThemeContext";
+
 import {
 	homeLogo,
 	projectsLogo,
@@ -18,7 +18,6 @@ function Header(props) {
 			props.setNavScrolling(false);
 		}, 1000);
 	};
-	const { theme } = useContext(ThemeContext);
 	const pages = ["about", "projects", "skills", "contact"];
 	const aboutLogoPNG = aboutLogo;
 	const projectsLogoPNG = projectsLogo;
@@ -32,7 +31,7 @@ function Header(props) {
 					<div className="nav-text ">
 						<div className="desktop-only">Home</div>
 						<div className="mobile-only">
-							<img src={homeLogoPNG} className={theme + " nav-logo"} />
+							<img src={homeLogoPNG} className="nav-logo" />
 						</div>
 					</div>
 				</Link>
@@ -50,10 +49,7 @@ function Header(props) {
 								{page.charAt(0).toUpperCase() + page.slice(1)}
 							</div>
 							<div className="mobile-only">
-								<img
-									src={eval(page + "LogoPNG")}
-									className={theme + " nav-logo"}
-								/>
+								<img src={eval(page + "LogoPNG")} className="nav-logo" />
 							</div>
 						</div>
 					</Link>

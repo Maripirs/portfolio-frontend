@@ -1,31 +1,18 @@
 // import { useEffect, useState } from "react";
 import "./About.css";
-import Drawing from "../drawing/Drawing";
-import ThemeContext from "../ThemeContext";
-import { useContext } from "react";
+import DrawingFull from "../drawing/DrawingFull";
+import DrawingSmall from "../drawing/DrawingSmall";
 
 const About = (props) => {
-	const { theme, themeColors } = useContext(ThemeContext);
 	return (
 		<>
-			<h2
-				className="section-title"
-				style={{
-					backgroundColor:
-						theme === "dark"
-							? themeColors.dark.background3
-							: themeColors.light.background3,
-					color:
-						theme === "dark"
-							? themeColors.dark.color1
-							: themeColors.light.color1,
-				}}
-			>
-				About Me
-			</h2>
+			<h2 className="section-title">About Me</h2>
 			<div className="about-container">
-				<div className="about-image">
-					<Drawing dimention="30vh" />
+				<div className="about-image small">
+					<DrawingSmall />
+				</div>
+				<div className="about-image full">
+					<DrawingFull />
 				</div>
 				<div className="about-text">
 					<div className="about-header">

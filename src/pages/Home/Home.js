@@ -1,14 +1,13 @@
-import Drawing from "../../components/drawing/Drawing";
+import DrawingSmall from "../../components/drawing/DrawingSmall";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import React from "react";
 
-function Home(props) {
+function Home() {
 	return (
-		<div className="welcomeScreen" id="welcomeScreen">
+		<div className="welcome-screen" id="welcomeScreen">
 			<h1>Hey! I'm Maripi</h1>
 			<h2> Welcome to my Portfolio</h2>
-			<Drawing home="true" dimention="15vh" />
+			<DrawingSmall home="true" dimention="15vh" />
 			<Link to="/main">
 				<button className="view-work" type="button">
 					View my Work

@@ -12,6 +12,7 @@ header {
 	flex-direction: column;
 	z-index: 10;
 	box-shadow: 0px 12px 15px -3px rgba(0, 0, 0, 0.2);
+	background-color: var(--background2);
 }
 
 .header_hidden {
@@ -54,52 +55,21 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: var(--color3);
 }
 .nav-logo {
 	height: calc(var(--bar-hg-mb) * 0.8);
 	width: calc(var(--bar-hg-mb) * 0.8);
-}
-
-.light header {
-	background-color: var(--light-bg2);
-}
-.dark header {
-	background-color: var(--dark-bg2);
-}
-
-.light .nav-text {
-	color: var(--light-co3);
-}
-
-.dark .nav-text {
-	color: var(--dark-co1);
-}
-
-.dark .nav-logo {
 	filter: brightness(200) saturate(0);
 }
 
-.light .nav-logo {
-	filter: brightness(50) saturate(0);
-}
-
-.light .nav-bar a:hover {
+.nav-bar a:hover {
 	background-color: rgba(85, 85, 107, 0.5);
 	box-shadow: 10px -14px 15px 0px rgba(0, 0, 0, 0.2),
 		-10px -15px 15px 4px rgba(0, 0, 0, 0.2);
 }
-.light .selected {
+.selected {
 	background-color: rgb(85, 85, 107);
-	box-shadow: 10px -14px 15px 0px rgba(0, 0, 0, 0.2),
-		-10px -15px 15px 4px rgba(0, 0, 0, 0.2);
-}
-.dark .nav-bar a:hover {
-	background-color: rgba(113, 113, 138, 0.5);
-	box-shadow: 10px -14px 15px 0px rgba(0, 0, 0, 0.2),
-		-10px -15px 15px 4px rgba(0, 0, 0, 0.2);
-}
-.dark .selected {
-	background-color: rgb(10, 10, 81);
 	box-shadow: 10px -14px 15px 0px rgba(0, 0, 0, 0.2),
 		-10px -15px 15px 4px rgba(0, 0, 0, 0.2);
 }

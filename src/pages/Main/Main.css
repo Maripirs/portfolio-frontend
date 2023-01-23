@@ -17,8 +17,8 @@
 	align-items: center;
 	justify-content: stretch;
 	flex-direction: column;
-	/* color: white; */
-	background-color: rgb(33, 32, 37);
+	color: var(--color1);
+	background-color: var(--background1);
 	box-shadow: inset 0px -15px 15px -3px rgba(0, 0, 0, 0.1);
 	z-index: 5;
 }
@@ -32,22 +32,10 @@
 	width: 100%;
 }
 
-.dark .main-content {
-	background-color: var(--dark-bg1);
-	color: var(--dark-co1);
+.section-title {
+	background-color: var(--background3);
 }
 
-.light .main-content {
-	background-color: var(--light-bg1);
-	color: var(--light-co1);
-}
-
-.light .section-title {
-	background-color: var(--light-bg3);
-}
-.dark .section-title {
-	background-color: var(--dark-bg3);
-}
 .header-active- {
 	display: none;
 }

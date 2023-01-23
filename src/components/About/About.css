@@ -4,7 +4,6 @@
 	width: 100vw;
 	flex-shrink: 0;
 	height: fit-content;
-	min-height: calc(var(--vh, 1vh) * 100 - 200px);
 	justify-content: center;
 	align-items: center;
 }
@@ -78,7 +77,10 @@
 	}
 	#about {
 		justify-content: space-between;
-		/* height: fit-content; */
+		min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-dt));
+	}
+	.about-image.full {
+		display: none;
 	}
 }
 /* DESKTOP */
@@ -96,7 +98,10 @@
 		font-size: 15px;
 		font-weight: 300;
 	}
-	/* #about {
-		height: calc((var(--vh, 1vh) * 100) - 200px);
-	} */
+	.about-image.small {
+		display: none;
+	}
+	#about {
+		min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-mb));
+	}
 }

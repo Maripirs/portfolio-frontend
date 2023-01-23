@@ -5,6 +5,8 @@
 	justify-content: space-around;
 	flex-direction: column;
 	align-items: center;
+	background-color: var(--background2);
+	color: var(--color3);
 }
 
 .links {
@@ -31,14 +33,7 @@
 	margin: 2px;
 	font-weight: 100;
 }
-footer.light {
-	background-color: var(--light-bg2);
-	color: var(--light-co3);
-}
-footer.dark {
-	background-color: var(--dark-bg2);
-	color: var(--dark-co1);
-}
+
 @media (max-width: 600px) {
 	.link-logo {
 		height: 25px;
