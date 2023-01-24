@@ -17,40 +17,6 @@ const Projects = () => {
 		getProjectsData();
 	}, []);
 
-	const dataToHTML = () => {
-		return projects.map((project, index) => (
-			<div key={index} className="project-card ">
-				<div className="project-title">{project.name}</div>
-				<div className="card-contents">
-					<div className="project-img-cont">
-						<img
-							className="project-img-element"
-							src={project.image}
-							alt="project screenshot"
-						/>
-					</div>
-					<div className="project-info">
-						<div className="project-summary"></div>
-						<div className="project-links">
-							<a href={project.git}>
-								<button>Github</button>
-							</a>
-							<a href={project.live}>
-								<button>Live Site</button>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		));
-	};
-
-	useEffect(() => {
-		if (projects) {
-			setProjectsHTML(dataToHTML());
-		}
-	}, [projects]);
-
 	return projects ? (
 		<>
 			<h2 className="section-title">Projects</h2>
@@ -67,7 +33,14 @@ const Projects = () => {
 								/>
 							</div>
 							<div className="project-info">
-								<div className="project-summary"></div>
+								<div className="tools-cont">
+									{project.tools.map((tool, index) => (
+										<img className="tool-badge" src={tool.badge} />
+									))}
+								</div>
+								<div className="project-summary">
+									<p>{project.summary}</p>
+								</div>
 								<div className="project-links">
 									<a href={project.git}>
 										<button>Github</button>

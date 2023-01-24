@@ -16,6 +16,10 @@ function App() {
 			document.documentElement.style.setProperty("--color2", "black");
 			document.documentElement.style.setProperty("--color3", "white");
 			document.documentElement.style.setProperty(
+				"--color4",
+				"rgb(85, 85, 107, 0.5)"
+			);
+			document.documentElement.style.setProperty(
 				"--project-shadow",
 				"#00000020"
 			);
@@ -44,6 +48,10 @@ function App() {
 			document.documentElement.style.setProperty("--color1", "white");
 			document.documentElement.style.setProperty("--color2", "white");
 			document.documentElement.style.setProperty("--color3", "white");
+			document.documentElement.style.setProperty(
+				"--color4",
+				"85, 85, 107, 0.5"
+			);
 			document.documentElement.style.setProperty(
 				"--dr-border",
 				"saturate(0) brightness(10) "

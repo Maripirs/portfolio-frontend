@@ -21,7 +21,7 @@ const About = (props) => {
 					</div>
 					<div className="about-bio">
 						<p className="about-bio-text">
-							With a background in architecture, I recently made the desition to
+							With a background in architecture, I recently made the desicion to
 							switch careers to pursue a career in Software Development{" "}
 						</p>
 						<p className="about-bio-text">

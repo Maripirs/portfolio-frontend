@@ -12,6 +12,7 @@
 .project-summary {
 	display: flex;
 	flex-grow: 1;
+	text-align: justify;
 }
 
 .project-card {
@@ -28,13 +29,24 @@
 	font-size: 25px;
 	font-weight: 600;
 }
+
+.tools-cont {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: space-between;
+	width: 100%;
+}
+
+.tool-badge {
+	margin: 5px;
+}
 .project-img-cont {
 	display: flex;
 	flex-grow: 1;
 }
 .project-img-element {
 	object-fit: cover;
-	border: 3px solid black;
 }
 .card-contents {
 	display: flex;
@@ -53,8 +65,16 @@
 	display: flex;
 	align-items: space-around;
 	justify-content: space-around;
-	min-width: 200px;
+	min-width: 300px;
 	width: 60%;
+}
+.project-links button {
+	background-color: var(--background2);
+	color: var(--color3);
+	border: none;
+	padding: 5px 30px;
+	border-radius: 5px;
+	font-weight: 600;
 }
 
 /* MOBILE */
@@ -83,8 +103,11 @@
 	}
 
 	.project-img-cont {
+		display: flex;
+		justify-content: center;
 		width: 100%;
-		background-color: blueviolet;
+		height: 40%;
+		margin-bottom: 10px;
 	}
 	.project-img-element {
 		max-width: 100%;
@@ -104,9 +127,8 @@
 	.project-card {
 		display: flex;
 		flex-grow: 0.5;
-		height: 30vh;
-		width: 40vw;
-		min-width: 50vh;
+		height: 400px;
+		width: 500px;
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
@@ -133,7 +155,6 @@
 	}
 	.project-info {
 		margin-left: 3vw;
-		background-color: rgb(95, 84, 94);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
