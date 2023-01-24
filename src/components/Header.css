@@ -60,7 +60,7 @@ header {
 .nav-logo {
 	height: calc(var(--bar-hg-mb) * 0.8);
 	width: calc(var(--bar-hg-mb) * 0.8);
-	filter: brightness(200) saturate(0);
+	filter: brightness(0) saturate(0) invert(1);
 }
 
 .nav-bar a:hover {

@@ -35,7 +35,11 @@ const Projects = () => {
 							<div className="project-info">
 								<div className="tools-cont">
 									{project.tools.map((tool, index) => (
-										<img className="tool-badge" src={tool.badge} />
+										<img
+											className="tool-badge"
+											key={index + "tool"}
+											src={tool.badge}
+										/>
 									))}
 								</div>
 								<div className="project-summary">

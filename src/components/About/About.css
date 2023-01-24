@@ -68,6 +68,7 @@
 		flex-grow: 1;
 		min-height: 50vw;
 		width: 40vw;
+		margin-top: 20px;
 	}
 	.about-text {
 		flex-grow: 1;
