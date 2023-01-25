@@ -1,0 +1,82 @@
+.project-img-cont {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	height: fit-content;
+	flex-shrink: 0;
+}
+.carrousel {
+	display: flex;
+	position: relative;
+}
+.project-img-element {
+	object-fit: cover;
+	transition: 0.5s ease-in-out;
+	min-width: 100%;
+	width: 100%;
+	aspect-ratio: 1;
+	overflow: hidden;
+}
+.change-image {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	font-size: 35px;
+	top: 0;
+	height: 100%;
+	width: 20%;
+	z-index: 10;
+}
+.change-image p {
+	-webkit-text-stroke: 1px black;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.304);
+	color: white;
+	font-weight: 600;
+	margin: 20px;
+}
+.change-image:hover {
+	background-color: rgba(0, 0, 0, 0.306);
+}
+.move-back {
+	justify-content: flex-start;
+	left: 0;
+}
+.move-forward {
+	justify-content: flex-end;
+	right: 0;
+}
+.tracker {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: 100%;
+}
+.circle {
+	width: 7px;
+	height: 7px;
+	margin: 0px 10px;
+	border: 1px solid var(--color1);
+	border-radius: 7px;
+}
+.circle.filled {
+	background-color: var(--color1);
+}
+@media (max-width: 600px) {
+	.project-img-cont {
+		height: fit-content;
+	}
+	.carrousel {
+		display: flex;
+		justify-content: flex-start;
+		margin: 10px 0;
+	}
+}
+
+@media (min-width: 600px) {
+	.project-img-cont {
+		height: 350px;
+		max-width: 45%;
+	}
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ImageCarousel from "./ImageCarousel";
 import "./Projects.css";
 
 const Projects = () => {
@@ -25,13 +26,13 @@ const Projects = () => {
 					<div key={index} className="project-card ">
 						<div className="project-title">{project.name}</div>
 						<div className="card-contents">
-							<div className="project-img-cont">
-								<img
+							<ImageCarousel images={project.image} />
+							{/* <img
 									className="project-img-element"
 									src={project.image}
 									alt="project screenshot"
-								/>
-							</div>
+								/> */}
+
 							<div className="project-info">
 								<div className="tools-cont">
 									{project.tools.map((tool, index) => (

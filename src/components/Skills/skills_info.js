@@ -133,7 +133,7 @@ const skills_arr = [
 				</g>
 			</svg>
 		),
-		description: "Platform dor software development and version control",
+		description: "Platform for software development and version control",
 		doc: "https://github.com/about",
 	},
 
