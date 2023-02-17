@@ -3,20 +3,129 @@ import ImageCarousel from "./ImageCarousel";
 import "./Projects.css";
 
 const Projects = () => {
-	const [projects, setProjects] = useState(null);
-	const [projectsHTML, setProjectsHTML] = useState(null);
-
-	const getProjectsData = async () => {
-		const response = await fetch(
-			"https://maripi-portfolio-backend.herokuapp.com/projects"
-		);
-		const data = await response.json();
-		setProjects(data);
-	};
-
-	useEffect(() => {
-		getProjectsData();
-	}, []);
+	const projects = [
+		{
+			name: "Pokemon Advantage Calculator",
+			live: "https://davipi.netlify.app/",
+			git: "https://github.com/Maripirs/pokemon-advantage-calculator",
+			image: [
+				"./projects-images/pc-1.png",
+				"./projects-images/pc-2.png",
+				"./projects-images/pc-3.png",
+				"./projects-images/pc-4.png",
+			],
+			tools: [
+				{
+					name: "React",
+					badge:
+						"https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+				},
+				{
+					name: "JavaScript",
+					badge:
+						"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+				},
+				{
+					name: "HTML",
+					badge:
+						"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+				},
+				{
+					name: "CSS",
+					badge:
+						"https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+				},
+			],
+			summary:
+				"React App that fetches random pokemon from pokeAPI and compares their type advantages",
+		},
+		{
+			name: "Game of Tres",
+			live: "https://maripirs.github.io/Game-of-Tres/",
+			git: "https://github.com/Maripirs/Game-of-Tres",
+			image: [
+				"./projects-images/tr-1.png",
+				"./projects-images/tr-2.png",
+				"./projects-images/tr-3.png",
+				"./projects-images/tr-4.png",
+			],
+			tools: [
+				{
+					name: "JavaScript",
+					badge:
+						"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+				},
+				{
+					name: "HTML",
+					badge:
+						"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+				},
+				{
+					name: "CSS",
+					badge:
+						"https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+				},
+			],
+			summary: "A web browser card game for 2-4 players",
+		},
+		{
+			name: "Mastermind-backend",
+			live: "https://maripirs.github.io/Mastermind/",
+			git: "https://github.com/Maripirs/Mastermind",
+			image: [
+				"./projects-images/mm-1.png",
+				"./projects-images/mm-2.png",
+				"./projects-images/mm-3.png",
+				"./projects-images/mm-4.png",
+			],
+			tools: [
+				{
+					name: "JavaScript",
+					badge:
+						"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+				},
+				{
+					name: "HTML",
+					badge:
+						"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+				},
+				{
+					name: "CSS",
+					badge:
+						"https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+				},
+			],
+			summary: "A build of the classic game of mastermind using vanilla JS",
+		},
+		{
+			name: "Tic Tac Toe",
+			live: "https://maripirs.github.io/Tic-Tac-Toe/",
+			git: "https://github.com/Maripirs/Tic-Tac-Toe",
+			image: [
+				"./projects-images/ttt-1.png",
+				"./projects-images/ttt-2.png",
+				"./projects-images/ttt-3.png",
+			],
+			tools: [
+				{
+					name: "JavaScript",
+					badge:
+						"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+				},
+				{
+					name: "HTML",
+					badge:
+						"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+				},
+				{
+					name: "CSS",
+					badge:
+						"https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+				},
+			],
+			summary: "Simple Tic Tac Toe browser game for two players.",
+		},
+	];
 
 	return projects ? (
 		<>
