@@ -1,20 +1,21 @@
-import DrawingSmall from "../../components/drawing/DrawingSmall";
+import drawing from "../../components/SVG/drawing";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Home() {
-	return (
-		<div className="welcome-screen" id="welcomeScreen">
-			<h1>Hey! I'm Maripi</h1>
-			<h2> Welcome to my Portfolio</h2>
-			<DrawingSmall home="true" dimention="15vh" />
-			<Link to="/main">
-				<button className="view-work" type="button">
-					View my Work
-				</button>
-			</Link>
-		</div>
-	);
+    return (
+        <div className="welcome-screen" id="home">
+            <h1>Hey! I'm Maripi</h1>
+            <h2> Welcome to my Portfolio</h2>
+
+            {drawing}
+            <Link smooth to="/#projects" id="viewWork">
+                <button className="view-work" type="button">
+                    View my Work
+                </button>
+            </Link>
+        </div>
+    );
 }
 
 export default Home;

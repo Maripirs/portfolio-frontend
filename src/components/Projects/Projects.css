@@ -1,153 +1,156 @@
 .cards-container,
 #projects {
-	display: flex;
-	height: auto;
-	width: 100vw;
+    display: flex;
+    height: auto;
+    width: 100vw;
 }
 #projects {
-	flex-direction: column;
-	justify-content: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .project-summary {
-	display: flex;
-	flex-grow: 1;
-	text-align: justify;
+    display: flex;
+    flex-grow: 1;
+    text-align: justify;
 }
 
 .project-card {
-	display: flex;
+    display: flex;
 }
 
 .project-title {
-	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	min-height: 40px;
-	font-size: 25px;
-	font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .tools-cont {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: space-between;
-	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 100%;
 }
 
 .tool-badge {
-	margin: 5px;
+    margin: 5px;
 }
 
 .card-contents {
-	display: flex;
-	flex-direction: column;
-	height: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
 }
 .project-info {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .project-links {
-	display: flex;
-	align-items: space-around;
-	justify-content: space-around;
-	min-width: 300px;
-	width: 60%;
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    min-width: 300px;
+    width: 60%;
 }
-.project-links button {
-	background-color: var(--background2);
-	color: var(--color3);
-	border: none;
-	padding: 5px 30px;
-	border-radius: 5px;
-	font-weight: 600;
+.project-links button,
+.contact-container button {
+    background-color: var(--background2);
+    color: var(--color3);
+    border: none;
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-	.cards-container {
-		flex-direction: column;
-	}
-	.card-contents {
-		flex-direction: column;
-		height: fit-content;
-		width: 100%;
-	}
-	.project-card {
-		/* min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-mb) * 2); */
-		width: calc(80vw - 40px);
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		margin: 5vh 10vw;
-		padding: 20px;
-		height: fit-content;
-		flex-shrink: 0;
-	}
+    .cards-container {
+        flex-direction: column;
+    }
+    .card-contents {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+    .project-card {
+        /* min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-mb) * 2); */
+        width: calc(80vw - 40px);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5vh 10vw;
+        padding: 20px;
+        height: fit-content;
+        flex-shrink: 0;
+    }
 
-	.project-title {
-		display: flex;
-		font-size: 20px;
-	}
-	.project-info {
-		margin-top: 10px;
-	}
-	.project-card {
-		box-shadow: 3px 5px 14px 4px var(--project-shadow);
-	}
+    .project-title {
+        display: flex;
+        font-size: 20px;
+    }
+    .project-info {
+        margin-top: 10px;
+    }
+    .project-card,
+    .resume-card {
+        box-shadow: 3px 5px 14px 4px var(--project-shadow);
+    }
 }
 /* DESKTOP */
 @media (min-width: 600px) {
-	.cards-container {
-		justify-content: center;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-	.project-card {
-		display: flex;
-		flex-grow: 0.5;
-		height: 450px;
-		min-width: 500px;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		margin: 5vh 5vw;
-		max-width: 800px;
-	}
+    .cards-container {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .project-card {
+        display: flex;
+        flex-grow: 0.5;
+        height: 450px;
+        min-width: 500px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5vh 5vw;
+        max-width: 800px;
+    }
 
-	.project-title {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 30px;
-	}
+    .project-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+    }
 
-	.card-contents {
-		flex-direction: row;
-		height: 80%;
-		width: 90%;
-	}
-	.project-info {
-		margin-left: 3vw;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		width: 20vw;
-		height: 350px;
-		flex-grow: 1;
-	}
-	.title-text {
-		height: 20px;
-	}
-	.project-card {
-		box-shadow: 7px 10px 28px 8px var(--project-shadow);
-	}
+    .card-contents {
+        flex-direction: row;
+        height: 80%;
+        width: 90%;
+    }
+    .project-info {
+        margin-left: 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+        height: 350px;
+        flex-grow: 1;
+    }
+    .title-text {
+        height: 20px;
+    }
+    .project-card,
+    .resume-card {
+        box-shadow: 7px 10px 28px 8px var(--project-shadow);
+    }
 }
