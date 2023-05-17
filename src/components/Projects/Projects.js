@@ -37,7 +37,7 @@ const Projects = () => {
         },
         {
             name: "Game of Tres",
-            live: "https://tres.maripi.net",
+            live: "https://maripirs.github.io/Game-of-Tres/",
             git: "https://github.com/Maripirs/Game-of-Tres",
             image: [
                 "./projects-images/tr-1.png",
@@ -88,31 +88,31 @@ const Projects = () => {
             summary:
                 "A build of the classic game of mastermind using vanilla JS",
         },
-        {
-            name: "Tic Tac Toe",
-            live: "https://ttt.maripi.net",
-            git: "https://github.com/Maripirs/Tic-Tac-Toe",
-            image: [
-                "./projects-images/ttt-1.png",
-                "./projects-images/ttt-2.png",
-                "./projects-images/ttt-3.png",
-            ],
-            tools: [
-                {
-                    name: "JavaScript",
-                    badge: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
-                },
-                {
-                    name: "HTML",
-                    badge: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
-                },
-                {
-                    name: "CSS",
-                    badge: "https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
-                },
-            ],
-            summary: "Simple Tic Tac Toe browser game for two players.",
-        },
+        // {
+        //     name: "Tic Tac Toe",
+        //     live: "https://ttt.maripi.net",
+        //     git: "https://github.com/Maripirs/Tic-Tac-Toe",
+        //     image: [
+        //         "./projects-images/ttt-1.png",
+        //         "./projects-images/ttt-2.png",
+        //         "./projects-images/ttt-3.png",
+        //     ],
+        //     tools: [
+        //         {
+        //             name: "JavaScript",
+        //             badge: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+        //         },
+        //         {
+        //             name: "HTML",
+        //             badge: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+        //         },
+        //         {
+        //             name: "CSS",
+        //             badge: "https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+        //         },
+        //     ],
+        //     summary: "Simple Tic Tac Toe browser game for two players.",
+        // },
     ];
 
     return projects ? (
@@ -147,7 +147,7 @@ const Projects = () => {
                                     <a href={project.git}>
                                         <button>Github</button>
                                     </a>
-                                    <a href={project.live}>
+                                    <a href={project.live} target="_blank">
                                         <button>Live Site</button>
                                     </a>
                                 </div>
