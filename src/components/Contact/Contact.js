@@ -35,11 +35,12 @@ const Contact = (props) => {
 					<input type="submit" className="submit-button" />
 				</form> */}
                 <div className="contact-text">
-                    <p>Shoot me an email at maripibartosch@gmail.com</p>
+                    <p>Shoot me an email at mariapazmaluenda@gmail.com</p>
                     <p>or</p>
                     <p>Find me on LinkedIn and Github as @Maripirs</p>
                 </div>
-                <div className="divider"></div>
+                
+                {/* <div className="divider"></div>
                 <a
                     href={Resume}
                     target="_blank"
@@ -60,7 +61,7 @@ const Contact = (props) => {
                         />
                     </svg>
                     <button className="view-work">Open Resume</button>
-                </a>
+                </a> */}
             </div>
         </>
     );
