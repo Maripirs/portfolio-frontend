@@ -30,7 +30,7 @@ function Footer(props) {
                     />
                 </a>
             </div>
-            <p id="footer-text">Built by Maripi Bartosch</p>{" "}
+            <p id="footer-text">Built by Maripi Maluenda</p>{" "}
         </div>
     );
 }
