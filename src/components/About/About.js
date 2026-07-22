@@ -1,9 +1,8 @@
-// import { useEffect, useState } from "react";
 import "./About.css";
 import DrawingFull from "../drawing/DrawingFull";
 import DrawingSmall from "../drawing/DrawingSmall";
 
-const About = (props) => {
+const About = () => {
     return (
         <>
             <h2 className="section-title">About Me</h2>
@@ -17,17 +16,27 @@ const About = (props) => {
                 <div className="about-text">
                     <div className="about-header">
                         <h2 id="about-name">Maripi Maluenda</h2>
-                        <h4 id="about-title">Full Stack Web Developer</h4>
+                        <h4 id="about-title">
+                            Full Stack Developer | Recent M.S. Graduate
+                        </h4>
                     </div>
                     <div className="about-bio">
                         <p className="about-bio-text">
-                            Currently pursuing a Masters degree in Compurer
-                            Science and Engineering at the University of Nevada,
-                            Reno. Where I have the privilege of working as a Graduate Teaching Assistant.{" "}
+                            I recently graduated with a master's degree in
+                            Computer Science and Engineering from the University
+                            of Nevada, Reno, where I also worked as a Graduate
+                            Teaching Assistant.
                         </p>
                         <p className="about-bio-text">
-                            I have a background in architecture, and in my free time I enjoy playing guitar, rock
-                            climbing, hiking, and playing board games.
+                            I'm now based in San Francisco and looking for
+                            software engineering opportunities where I can build
+                            practical tools across full-stack web, robotics, and
+                            AI-assisted workflows.
+                        </p>
+                        <p className="about-bio-text">
+                            I have a background in architecture, and in my free
+                            time I enjoy playing guitar, rock climbing, hiking,
+                            and board games.
                         </p>
                         <p className="about-bio-text" id="bio-end">
                             Thanks for stopping by!

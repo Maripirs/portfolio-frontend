@@ -5,10 +5,13 @@
 	overflow: hidden;
 	height: fit-content;
 	flex-shrink: 0;
+	border-radius: 6px;
 }
 .carrousel {
 	display: flex;
 	position: relative;
+	overflow: hidden;
+	border-radius: 6px;
 }
 .project-img-element {
 	object-fit: cover;
@@ -36,7 +39,10 @@
 	margin: 20px;
 }
 .change-image:hover {
-	background-color: rgba(0, 0, 0, 0.306);
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), transparent);
+}
+.move-forward:hover {
+	background: linear-gradient(270deg, rgba(0, 0, 0, 0.3), transparent);
 }
 .move-back {
 	justify-content: flex-start;

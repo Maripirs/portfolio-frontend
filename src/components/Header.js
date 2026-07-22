@@ -1,22 +1,9 @@
-import { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Header.css";
 
-import {
-    homeLogo,
-    projectsLogo,
-    skillsLogo,
-    contactLogo,
-    aboutLogo,
-} from "./logos/";
-
 function Header(props) {
-    const handleHeaderClick = (e) => {
+    const handleHeaderClick = () => {
         props.setHeaderClass("header_active");
-        // // props.setNavScrolling(true);
-        // setTimeout(() => {
-        //     props.setNavScrolling(false);
-        // }, 1000);
     };
     const pages = ["projects", "about", "skills", "contact"];
     const aboutLogoSVG = (
@@ -104,6 +91,13 @@ function Header(props) {
             />
         </svg>
     );
+    const pageLogoSVGs = {
+        about: aboutLogoSVG,
+        projects: projectsLogoSVG,
+        skills: skillsLogoSVG,
+        contact: contactLogoSVG,
+    };
+
     return (
         <header className={props.headerClass}>
             <nav className="nav-bar">
@@ -131,7 +125,7 @@ function Header(props) {
                                 {page.charAt(0).toUpperCase() + page.slice(1)}
                             </div>
                             <div className="mobile-only">
-                                {eval(page + "LogoSVG")}
+                                {pageLogoSVGs[page]}
                             </div>
                         </div>
                     </Link>

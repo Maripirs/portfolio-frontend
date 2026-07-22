@@ -33,6 +33,10 @@
 	justify-content: center;
 	fill: var(--color1);
 	color: var(--color1);
+	background: var(--card-gradient, var(--background1));
+	border: 1px solid var(--card-border, transparent);
+	border-radius: 8px;
+	overflow: hidden;
 }
 /* slower */
 .inactive.skill-card {
@@ -52,15 +56,17 @@
 	font-size: 14px;
 	transition: font-size 0.1s ease 0.5s;
 }
-.active,
+.active.skill-card,
 .skill-card:hover {
 	transition: width 0.5s ease-in-out 0s, height 0.5s ease-in-out 0s,
-		font-size 3s ease 0.5s;
+		font-size 3s ease 0.5s, box-shadow 0.2s ease, transform 0.2s ease;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--background2);
+	background: var(--card-active-gradient, var(--background2));
+	box-shadow: var(--soft-card-shadow, 3px 5px 10px 2px rgba(0, 0, 0, 0.2));
+	transform: translateY(-1px);
 }
 
 .skill-description {
@@ -80,7 +86,7 @@
 		height: 70px;
 		padding: 5px 10px;
 		margin: 10px;
-		box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 	}
 
 	.inactive .skill-name {
@@ -104,7 +110,7 @@
 		width: 50px;
 		margin: 10px;
 	}
-	.active {
+	.active.skill-card {
 		width: 150px;
 		height: 200px;
 		padding-bottom: 10px;
@@ -128,11 +134,11 @@
 	.skill-card {
 		width: 120px;
 		height: 150px;
-		box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 		padding: 15px 0 25px 0;
 		margin: 25px;
 	}
-	.active {
+	.active.skill-card {
 		width: 180px;
 		height: 300px;
 	}

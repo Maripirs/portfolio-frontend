@@ -1,6 +1,5 @@
 import "./App.css";
 import { Route, Routes } from "react-router";
-import Home from "./pages/Home/Home";
 import Main from "./pages/Main/Main";
 import { useState, useEffect } from "react";
 import changeColors from "./ChangeColors";
@@ -12,32 +11,42 @@ function App() {
     }, [theme]);
 
     useEffect(() => {
-        window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", (event) => {
-                setTheme(event.matches ? "dark" : "light");
-            });
-        if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
+        const colorSchemeQuery = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        );
+        const handleColorSchemeChange = (event) => {
+            setTheme(event.matches ? "dark" : "light");
+        };
+
+        colorSchemeQuery.addEventListener("change", handleColorSchemeChange);
+        if (colorSchemeQuery.matches) {
             setTheme("dark");
         }
-    }, []);
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-    // We listen to the resize event
-    window.addEventListener("resize", () => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
-    });
+        return () => {
+            colorSchemeQuery.removeEventListener(
+                "change",
+                handleColorSchemeChange
+            );
+        };
+    }, []);
+    useEffect(() => {
+        const setViewportHeight = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+        };
+
+        setViewportHeight();
+        window.addEventListener("resize", setViewportHeight);
+
+        return () => {
+            window.removeEventListener("resize", setViewportHeight);
+        };
+    }, []);
 
     return (
         <Routes>
-            <Route exact path="/" element={<Main URL={URL} />} />
+            <Route path="/" element={<Main />} />
         </Routes>
     );
 }

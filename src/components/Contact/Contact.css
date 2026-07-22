@@ -19,7 +19,8 @@
     max-width: 80vw;
     width: 600px;
     height: 1px;
-    background-color: white;
+    background-color: var(--color1);
+    opacity: 0.3;
 }
 .resume-container {
     height: fit-content;
@@ -27,13 +28,45 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    padding-top: 10px;
+    gap: 12px;
+    width: min(280px, calc(90vw - 40px));
     margin: 20px;
+    padding: 20px 24px;
+    background: var(--card-gradient, var(--background1));
+    border: 1px solid var(--card-border, transparent);
+    border-radius: 8px;
+    color: var(--color1);
+    cursor: pointer;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.resume-container:hover {
+    transform: translateY(-1px);
+}
+.resume-container:focus-visible {
+    outline: 2px solid var(--background4);
+    outline-offset: 4px;
+}
+.resume-link-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    padding: 5px 30px;
+    background: var(--button-gradient, var(--background2));
+    border-radius: 8px;
+    color: var(--color3);
+    font-weight: 600;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s ease;
+}
+.resume-container:hover .resume-link-label {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
 }
 .resumeSVG {
-    max-width: 80px;
-    color: white;
+    width: 58px;
+    height: 58px;
+    color: var(--color1);
 }
 .contact-form {
     display: flex;
@@ -47,7 +80,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: cnter;
+    align-items: center;
     width: 600px;
     max-width: 90vw;
 }
@@ -66,7 +99,7 @@ textarea {
 .submit-button {
     border: none;
     padding: 5px 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: 600;
 }
 

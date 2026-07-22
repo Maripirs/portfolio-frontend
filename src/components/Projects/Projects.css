@@ -10,12 +10,24 @@
 }
 .project-summary {
     display: flex;
-    flex-grow: 1;
     text-align: justify;
+    overflow-y: auto;
+    min-height: 0;
+    width: 100%;
+    padding-right: 6px;
+    scrollbar-width: thin;
+}
+
+.project-summary p {
+    margin: 0;
 }
 
 .project-card {
     display: flex;
+    background: var(--card-gradient, var(--background1));
+    border: 1px solid var(--card-border, transparent);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .project-title {
@@ -35,6 +47,7 @@
     justify-content: space-between;
     align-items: space-between;
     width: 100%;
+    flex-shrink: 0;
 }
 
 .tool-badge {
@@ -45,30 +58,54 @@
     display: flex;
     flex-direction: column;
     height: 80%;
+    min-height: 0;
 }
 .project-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 14px;
     align-items: center;
     flex-grow: 1;
+    min-height: 0;
 }
 
 .project-links {
     display: flex;
-    align-items: space-around;
-    justify-content: space-around;
-    min-width: 300px;
-    width: 60%;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-width: 0;
+    width: 100%;
+    flex-shrink: 0;
 }
+.project-link-button,
 .project-links button,
 .contact-container button {
     background-color: var(--background2);
+    background: var(--button-gradient, var(--background2));
     color: var(--color3);
     border: none;
     padding: 5px 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: 600;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.project-link-button:hover,
+.project-links button:hover,
+.contact-container button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    transform: translateY(-1px);
 }
 
 /* MOBILE */
@@ -99,10 +136,14 @@
     }
     .project-info {
         margin-top: 10px;
+        width: 100%;
+    }
+    .project-summary {
+        max-height: 130px;
     }
     .project-card,
     .resume-card {
-        box-shadow: 3px 5px 14px 4px var(--project-shadow);
+        box-shadow: var(--soft-card-shadow, 3px 5px 14px 4px var(--project-shadow));
     }
 }
 /* DESKTOP */
@@ -138,19 +179,18 @@
     }
     .project-info {
         margin-left: 3vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
         width: 20vw;
         height: 350px;
         flex-grow: 1;
+    }
+    .project-summary {
+        max-height: 125px;
     }
     .title-text {
         height: 20px;
     }
     .project-card,
     .resume-card {
-        box-shadow: 7px 10px 28px 8px var(--project-shadow);
+        box-shadow: var(--soft-card-shadow, 7px 10px 28px 8px var(--project-shadow));
     }
 }

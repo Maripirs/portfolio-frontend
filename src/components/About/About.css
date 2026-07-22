@@ -14,6 +14,11 @@
 	align-items: center;
 }
 
+.about-header {
+	width: 100%;
+	text-align: center;
+}
+
 .about-bio {
 	display: flex;
 	flex-direction: column;
@@ -31,6 +36,7 @@
 }
 #about-name {
 	margin: 0;
+	text-align: center;
 }
 
 .about-container {
@@ -53,32 +59,34 @@
 /* PHONE */
 @media (max-width: 600px) {
 	.about-bio {
-		flex-grow: 1;
+		flex-grow: 0;
 		width: 90%;
-		max-height: 200px;
 		font-size: 14px;
+		line-height: 1.45;
 	}
 	.about-bio-text {
 		margin: 0.5em;
 	}
 	.about-container {
 		flex-direction: column;
+		padding-bottom: 40px;
 	}
 	.about-image {
-		flex-grow: 1;
-		min-height: 50vw;
+		flex-grow: 0;
 		width: 40vw;
+		max-width: 180px;
 		margin-top: 20px;
 	}
 	.about-text {
-		flex-grow: 1;
+		flex-grow: 0;
+		width: 100%;
 	}
 	#about .section-title {
 		margin-bottom: 0px;
 	}
 	#about {
-		justify-content: space-between;
-		min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-dt));
+		justify-content: flex-start;
+		min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-mb));
 	}
 	.about-image.full {
 		display: none;
@@ -103,6 +111,6 @@
 		display: none;
 	}
 	#about {
-		min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-mb));
+		min-height: calc(var(--vh, 1vh) * 100 - var(--bar-hg-dt));
 	}
 }

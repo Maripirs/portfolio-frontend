@@ -1,4 +1,4 @@
-import drawing from "../../components/SVG/drawing";
+import Drawing from "../../components/SVG/drawing";
 import "./Home.css";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -8,7 +8,7 @@ function Home() {
             <h1>Hey! I'm Maripi</h1>
             <h2> Welcome to my Portfolio</h2>
 
-            {drawing}
+            <Drawing />
             <Link smooth to="/#projects" id="viewWork">
                 <button className="view-work" type="button">
                     View my Work

@@ -12,6 +12,13 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.drawing-container-svg:focus-visible {
+    outline: 3px solid var(--color3);
+    outline-offset: 4px;
 }
 
 #linework-svg {

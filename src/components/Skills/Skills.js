@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./Skills.css";
 import skills_arr from "./skills_info";
-const Skills = (props) => {
+const Skills = () => {
 	const [activeModal, setActiveModal] = useState(null);
 	const showModal = (e) => {
-		setActiveModal(e.target.closest(".skill-card").id);
+		setActiveModal(e.currentTarget.id);
 	};
 	return (
 		<>
@@ -26,7 +26,14 @@ const Skills = (props) => {
 								<p className="skill-name">{skill.name}</p>
 								<div className="skill-logo">{skill.svg}</div>
 								<small className="skill-description">{skill.description}</small>
-								<a href={skill.doc}>More Info</a>
+								<a
+									href={skill.doc}
+									target="_blank"
+									rel="noreferrer"
+									onClick={(event) => event.stopPropagation()}
+								>
+									More Info
+								</a>
 							</div>
 						);
 					})}

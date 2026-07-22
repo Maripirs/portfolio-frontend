@@ -1,8 +1,33 @@
 import "./Drawing.css";
-const drawing = (
+import { useState } from "react";
+
+const Drawing = () => {
+    const [animationKey, setAnimationKey] = useState(0);
+
+    const replayAnimation = () => {
+        setAnimationKey((key) => key + 1);
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            replayAnimation();
+        }
+    };
+
+    return (
     <>
-        <div className="drawing-container-svg">
+        <div
+            className="drawing-container-svg"
+            onClick={replayAnimation}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex="0"
+            aria-label="Replay portrait animation"
+        >
             <svg
+                key={animationKey}
+                data-animation-key={animationKey}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 195 195"
                 className="drawing"
@@ -309,6 +334,7 @@ const drawing = (
             </svg>
         </div>
     </>
-);
+    );
+};
 
-export default drawing;
+export default Drawing;

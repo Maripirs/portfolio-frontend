@@ -3,6 +3,7 @@ import "./ImageCarousel.css";
 
 const ImageCarousel = (props) => {
 	const imageArr = [...props.images];
+	const projectName = props.projectName || "project";
 	const [currentImage, setCurrentImage] = useState(0);
 	const handleChangeImage = (e) => {
 		let direction = parseInt(e.target.closest(".change-image").id);
@@ -32,7 +33,7 @@ const ImageCarousel = (props) => {
 						className="project-img-element"
 						src={image}
 						key={"projectImg" + idx}
-						alt="project screenshot"
+						alt={`${projectName} screenshot ${idx + 1}`}
 						style={{ transform: `translate(-${currentImage * 100}%)` }}
 					/>
 				))}
