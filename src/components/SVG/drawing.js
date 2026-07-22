@@ -1,11 +1,23 @@
 import "./Drawing.css";
 import { useState } from "react";
 
-const Drawing = () => {
+const Drawing = ({ onReplayComplete }) => {
     const [animationKey, setAnimationKey] = useState(0);
+    const [shouldNavigateAfterReplay, setShouldNavigateAfterReplay] =
+        useState(false);
 
     const replayAnimation = () => {
+        setShouldNavigateAfterReplay(true);
         setAnimationKey((key) => key + 1);
+    };
+
+    const handleAnimationEnd = (event) => {
+        if (!shouldNavigateAfterReplay || event.target.id !== "outline-svg") {
+            return;
+        }
+
+        setShouldNavigateAfterReplay(false);
+        onReplayComplete?.();
     };
 
     const handleKeyDown = (event) => {
@@ -23,11 +35,12 @@ const Drawing = () => {
             onKeyDown={handleKeyDown}
             role="button"
             tabIndex="0"
-            aria-label="Replay portrait animation"
+            aria-label="Replay portrait animation and view projects"
         >
             <svg
                 key={animationKey}
                 data-animation-key={animationKey}
+                onAnimationEnd={handleAnimationEnd}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 195 195"
                 className="drawing"
