@@ -46,10 +46,10 @@ const Projects = () => {
             live: "https://walkcode.maripi.net/",
             git: "https://github.com/Maripirs/walkcode",
             image: [
-                "./projects-images/walkcode-drills.png",
                 "./projects-images/walkcode-drill-question.png",
                 "./projects-images/walkcode-complexity.png",
                 "./projects-images/walkcode-review.png",
+                "./projects-images/walkcode-drills.png",
             ],
             tools: [
                 {
@@ -73,7 +73,6 @@ const Projects = () => {
             live: "https://maripirs.github.io/geek-guide-v2/",
             git: "https://github.com/Maripirs/geek-guide-v2",
             image: [
-                "./projects-images/geekguide-home.png",
                 "./projects-images/geekguide-library.png",
                 "./projects-images/geekguide-guide.png",
                 "./projects-images/geekguide-rulebook.png",
