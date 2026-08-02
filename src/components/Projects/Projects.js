@@ -42,6 +42,64 @@ const Projects = () => {
                 "WebAR shelf scanner that detects board-game boxes with YOLO/ONNX, crops titles, and matches them against a BGG visual index through FastAPI and CLIP. Built with Codex as an AI pair-programming workflow for prototyping, debugging, and integration.",
         },
         {
+            name: "WalkCode",
+            live: "https://walkcode.maripi.net/",
+            git: "https://github.com/Maripirs/walkcode",
+            image: [
+                "./projects-images/walkcode-drills.png",
+                "./projects-images/walkcode-drill-question.png",
+                "./projects-images/walkcode-complexity.png",
+                "./projects-images/walkcode-review.png",
+            ],
+            tools: [
+                {
+                    name: "JavaScript",
+                    badge: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+                },
+                {
+                    name: "HTML",
+                    badge: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+                },
+                {
+                    name: "CSS",
+                    badge: "https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+                },
+            ],
+            summary:
+                "Static, mobile-friendly coding-practice site for guided walkthroughs and quick code drills. It offers JavaScript and Python exercises, a browsable lesson library, and local progress tracking with no backend or build step.",
+        },
+        {
+            name: "GeekGuide",
+            live: "https://maripirs.github.io/geek-guide-v2/",
+            git: "https://github.com/Maripirs/geek-guide-v2",
+            image: [
+                "./projects-images/geekguide-home.png",
+                "./projects-images/geekguide-library.png",
+                "./projects-images/geekguide-guide.png",
+                "./projects-images/geekguide-rulebook.png",
+            ],
+            tools: [
+                {
+                    name: "React",
+                    badge: "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+                },
+                {
+                    name: "JavaScript",
+                    badge: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+                },
+                {
+                    name: "HTML",
+                    badge: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+                },
+                {
+                    name: "CSS",
+                    badge: "https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
+                },
+            ],
+            summary:
+                "React reference site for board-game rule summaries and searchable rulebooks. Browse a local game catalog, open individual guides, and search the included PDF rulebooks without relying on a backend.",
+        },
+        {
             name: "Pokemon Advantage Calculator",
             live: "https://poke-calc.maripi.net/",
             git: "https://github.com/Maripirs/pokemon-advantage-calculator",
@@ -98,33 +156,6 @@ const Projects = () => {
             ],
             summary:
                 "Browser card game for 2-4 players with custom rules, turn handling, and a lightweight vanilla JavaScript interface. The project emphasizes readable game logic, simple multiplayer flow, and a polished playable experience.",
-        },
-        {
-            name: "Mastermind-backend",
-            live: "https://maripirs.github.io/Mastermind/",
-            git: "https://github.com/Maripirs/Mastermind",
-            image: [
-                "./projects-images/mm-1.png",
-                "./projects-images/mm-2.png",
-                "./projects-images/mm-3.png",
-                "./projects-images/mm-4.png",
-            ],
-            tools: [
-                {
-                    name: "JavaScript",
-                    badge: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
-                },
-                {
-                    name: "HTML",
-                    badge: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
-                },
-                {
-                    name: "CSS",
-                    badge: "https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white",
-                },
-            ],
-            summary:
-                "Vanilla JavaScript implementation of the classic Mastermind puzzle game with code-breaking logic, feedback indicators, and a compact browser UI. It highlights DOM interaction, game-state management, and approachable front-end structure.",
         },
         // {
         //     name: "Tic Tac Toe",

@@ -73,7 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 14px;
+    gap: 10px;
     min-width: 0;
     width: 100%;
     flex-shrink: 0;
@@ -96,8 +96,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    min-width: 0;
+    flex: 0 0 auto;
+    min-width: 94px;
+    padding: 7px 16px;
+    font-size: 0.9rem;
+    line-height: 1.2;
     text-decoration: none;
 }
 
